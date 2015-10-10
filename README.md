@@ -1,6 +1,6 @@
 # IMC_webApp
 
-**IMC** prototype web site *© [INSAT](https://www.insat.rnu.tn) Microsoft Club*
+**IMC** prototype web site *© [INSAT](http://www.insat.rnu.tn) Microsoft Club*
 
 
 - Default Admin account : 
