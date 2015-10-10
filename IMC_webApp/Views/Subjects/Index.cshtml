@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Entities.Models.Subject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @if (Request.IsAuthenticated)
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
+    else
+    {
+        @Html.ActionLink("Log in to add subjects", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Title, "Index", "Comments", new { subjectID = item.SubjectID }, null)
+                @*@Html.DisplayFor(modelItem => item.Title)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SubjectID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SubjectID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SubjectID })
+                </td>
+            }
+            else
+            {
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.SubjectID })
+                </td>
+            }
+        </tr>
+    }
+
+</table>
