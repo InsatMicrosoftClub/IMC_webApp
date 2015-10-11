@@ -111,7 +111,7 @@ namespace DAL.Models
             base.Seed(context);
         }
 
-        //Create User=Admin@Admin.com with password=123.Mm in the Admin role        
+        //Create User=admin@123.Mm with password=123.Mm in the Admin role        
         public static void InitializeIdentityForEF(ApplicationDbContext db) {
             var userManager = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var roleManager = HttpContext.Current.GetOwinContext().Get<ApplicationRoleManager>();
