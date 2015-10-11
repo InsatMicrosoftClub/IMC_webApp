@@ -1,9 +1,13 @@
 # IMC_webApp
 
-**IMC** prototype web site *© [INSAT](http://www.insat.rnu.tn) Microsoft Club*
 
+####Download ZIP, extract.. open IMC_webSite.sln in Visual Studio.
+-----------------
 
 - Default Admin account : 
   * e-mail &emsp;&nbsp; : `admin@123.Mm`
   * password : `123.Mm`
-- In case of build errors, check the references for each project and correct eventual not found/missing dependencies accordingly.
+- With NuGet Manager taking care of dependencies, all should be fine. (*Internet connexion probably needed*)
+
+<br>
+> **IMC** prototype web site *© [INSAT](http://www.insat.rnu.tn) Microsoft Club*
